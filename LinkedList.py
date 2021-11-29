@@ -20,3 +20,16 @@ class linkedList:
             current.next = new_element
         else:
             self.head = new_element
+
+    # method to get value stored in node at cetaion position
+    def get_position(self, position):
+        counter = 1
+        current = self.head
+        if position < 1:
+            return None
+        while current and counter <= position:
+            if counter == position:
+                return current
+            current = current.next
+            counter += 1
+        return None
